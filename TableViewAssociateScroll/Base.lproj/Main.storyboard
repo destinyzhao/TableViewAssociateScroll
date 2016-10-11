@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mZM-gt-AOK">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tableview联动-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h77-sa-xiT">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="eSw-al-BUf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="t45-1j-m9P"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Luo-H2-Ve8"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jqL-os-L5d">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CMK-Pk-pg0"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sbK-TH-xhg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jqL-os-L5d" secondAttribute="bottom" id="73M-px-IgP"/>
+                            <constraint firstItem="jqL-os-L5d" firstAttribute="leading" secondItem="h77-sa-xiT" secondAttribute="trailing" id="AR0-9o-caJ"/>
+                            <constraint firstItem="jqL-os-L5d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Pae-Je-ikn"/>
+                            <constraint firstItem="h77-sa-xiT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aYT-7E-04E"/>
+                            <constraint firstItem="h77-sa-xiT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="err-62-Ws7"/>
+                            <constraint firstAttribute="trailing" secondItem="jqL-os-L5d" secondAttribute="trailing" id="fgR-TL-azU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h77-sa-xiT" secondAttribute="bottom" id="pUW-nn-K06"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tableview联动" id="b4A-4L-OLJ"/>
+                    <connections>
+                        <outlet property="leftTableView" destination="h77-sa-xiT" id="37J-Gp-EMZ"/>
+                        <outlet property="rightTableView" destination="jqL-os-L5d" id="P2z-3X-TdK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CE9-we-3WU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mZM-gt-AOK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9fO-Z3-Tu0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lh0-Ef-mGO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Reu-wV-itb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="792.95352323838085"/>
+        </scene>
+    </scenes>
+</document>

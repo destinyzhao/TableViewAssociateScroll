@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rightCellIdentifier" id="muR-6R-Qy8" customClass="RightTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="muR-6R-Qy8" id="796-vE-4id">
+                <frame key="frameInset" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVm-NN-pr1">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="cn0-4z-dfD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzq-mQ-HLj">
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="sb8-Ci-1bH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AVm-NN-pr1" firstAttribute="centerY" secondItem="796-vE-4id" secondAttribute="centerY" id="5jz-L7-yPu"/>
+                    <constraint firstAttribute="trailing" secondItem="AVm-NN-pr1" secondAttribute="trailing" constant="8" id="6RV-In-yqA"/>
+                    <constraint firstItem="vzq-mQ-HLj" firstAttribute="leading" secondItem="796-vE-4id" secondAttribute="leading" id="8dZ-7I-Hnc"/>
+                    <constraint firstAttribute="bottom" secondItem="vzq-mQ-HLj" secondAttribute="bottom" id="Ppf-oY-udD"/>
+                    <constraint firstAttribute="trailing" secondItem="vzq-mQ-HLj" secondAttribute="trailing" id="hgN-iu-cmL"/>
+                    <constraint firstItem="AVm-NN-pr1" firstAttribute="leading" secondItem="796-vE-4id" secondAttribute="leading" constant="8" id="q64-ox-lOE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLbl" destination="AVm-NN-pr1" id="D5u-YZ-xQf"/>
+            </connections>
+            <point key="canvasLocation" x="-2" y="81"/>
+        </tableViewCell>
+    </objects>
+</document>
